@@ -4,7 +4,6 @@ import styles from "./styles.module.scss";
 import {useStoryContext} from "hooks/useStoryContext";
 import {APIClient} from "lib/api";
 import {IStoryDetails} from "lib/api/responseTypes";
-import {userInfo} from "os";
 import {UserDetail} from "./UserDetail";
 
 export const StoryDetailsContent: React.FC = () => {

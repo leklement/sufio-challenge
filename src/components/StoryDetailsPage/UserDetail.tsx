@@ -31,8 +31,6 @@ export const UserDetail: React.FC<Props> = (props) => {
     getData();
   }, [userName]);
 
-  console.log("user: ", user);
-
   // Render
 
   return (
