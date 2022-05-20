@@ -1,0 +1,70 @@
+$default: (
+  text: #000,
+  bg-light: #f4f7f9,
+  bg-default: #e0ebf1,
+  bg-hover: #e2e9ee,
+  icon-default: #b6c4ca,
+  icon-hover: #000,
+);
+
+$blue: (
+  text: #fff,
+  bg-light: #3067fd,
+  bg-default: #1b4cd5,
+  bg-hover: #1a41ad,
+  icon-default: #ffffff,
+  icon-hover: #12338f,
+);
+
+$green: (
+  text: #000,
+  bg-light: #38f4a7,
+  bg-default: #25d88f,
+  bg-hover: #1dc580,
+  icon-default: #000000,
+  icon-hover: #16b373,
+);
+
+$red: (
+  text: #fff,
+  bg-light: #fb3665,
+  bg-default: #db244f,
+  bg-hover: #ba1b40,
+  icon-default: #ffffff,
+  icon-hover: #9f1636,
+);
+
+$yellow: (
+  text: #000,
+  bg-light: #f3ea52,
+  bg-default: #f3cf52,
+  bg-hover: #ebc12c,
+  icon-default: #ccaa30,
+  icon-hover: #d7ae1c,
+);
+
+@mixin apply-theme($property, $key) {
+  :global(body.default) & {
+    #{$property}: map-get($default, $key);
+  }
+
+  :global(body.blue) & {
+    #{$property}: map-get($blue, $key);
+  }
+
+  :global(body.green) & {
+    #{$property}: map-get($green, $key);
+  }
+
+  :global(body.red) & {
+    #{$property}: map-get($red, $key);
+  }
+
+  :global(body.yellow) & {
+    #{$property}: map-get($yellow, $key);
+  }
+}
+
+@mixin background-transition() {
+  transition: background-color 0.1s;
+}

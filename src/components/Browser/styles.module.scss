@@ -1,0 +1,69 @@
+@import "/src/lib/styles/themes.scss";
+@import "/src/lib/styles/mixins.scss";
+@import "/src/lib/styles/colors.scss";
+@import "/src/lib/styles/colors-css.scss";
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  @include custom-scrollbars-inplace();
+  color: var(--color-text);
+}
+
+html {
+  height: 100%;
+}
+
+:global(#react-app) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+a {
+  color: var(--color-text);
+}
+
+p {
+  line-height: 1.57;
+}
+
+.AppLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--color-background);
+
+  @include dark-mode() {
+    color: #fff;
+  }
+
+  &.fixed {
+    height: 100%;
+  }
+
+  > .header,
+  .footer {
+    flex: 0 0 90px;
+    box-sizing: border-box;
+
+    @include apply-theme(background-color, bg-light);
+    @include background-transition();
+  }
+
+  .main {
+    flex: 1 0;
+    min-height: 0;
+    overflow: auto;
+
+    // @include custom-scrollbars-inplace();
+  }
+
+  svg.logo path {
+    @include dark-mode() {
+      fill: #fff;
+    }
+  }
+}

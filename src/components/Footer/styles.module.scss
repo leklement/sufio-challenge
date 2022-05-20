@@ -1,0 +1,25 @@
+@import "/src/lib/styles/colors.scss";
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid $orange;
+  margin: 0px 90px;
+  padding-top: 27px;
+  padding-bottom: 30px;
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 12px;
+  }
+
+  .tabSelector {
+    span {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}

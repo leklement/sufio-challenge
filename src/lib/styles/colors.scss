@@ -1,0 +1,106 @@
+@import "mixins.scss";
+
+$border-blue: #377af6;
+
+$icon-blue: #0e66e2;
+$icon-blueish-gray: #afc8d3;
+$icon-dark-gray: #9baab4;
+$icon-black: #000000;
+
+$orange: #fe7139;
+$text-light-gray: #a7b3bb;
+$text-gray: rgba(0, 0, 0, 0.5);
+$text-disabled: #b6c4ca;
+$text-almost-black: #1e2a34;
+$text-black: #000000;
+$text-blue: #325ef8;
+$text-highlight: #c6eaff;
+
+$background-gray: #e0ebf1;
+$background-medium-gray: #eceff1;
+$background-light-gray: #f4f7f9;
+$background-black: #151a23;
+$background-menu: rgba(21, 26, 35, 0.95);
+
+$project-gray: #d3dde4;
+$project-blue: #254afc;
+$project-green: #36f696;
+$project-yellow: #f3cf52;
+$project-red: #fb3665;
+
+$button-blue: #4675fa;
+$button-blue-hover: #4396fd;
+$button-blue-outline: #acc1f3;
+
+$light: (
+  "background": #ffffff,
+  "background-blueish-gray": #a0b0b9,
+  "background-dialog": #ffffff,
+  "background-dialog-dark": #181818,
+  "background-dialog2": #ffffff,
+  "background-hover": #eaeef1,
+  "background-hover-subtle": #f1f5f7,
+  "background-box": #f1f5f7,
+  "background-input": #ffffff,
+  "background-table": #ffffff,
+  "background-light-blue": #cce5fd,
+  "background-medium-blue": #90beec,
+  "button-gray": #eaeef1,
+  "button-gray-hover": #dadee1,
+  "button-gray-on-gray": #e4e8eb,
+  "button-gray-on-gray-hover": #d7dadd,
+  "button-white-hover": #e0e4e7,
+  "button-blue": #4675fa,
+  "button-blue-hover": #4396fd,
+  "button-blue-outline": #acc1f3,
+  "button-wired-outline": #ebf3f8,
+  "border-gray": #e4eaec,
+  "border-light-gray": #f4f4f5,
+  "border-dark-gray": #d8dee0,
+  "icon-gray": #c7d1d5,
+  "icon-dark-gray": #{$icon-dark-gray},
+  "icon-black": #{$icon-black},
+  "icon-disabled": #c7d1d5,
+  "text": #000000,
+  "text-red": #f94b60,
+  "text-gray": #{$text-gray},
+  "text-almost-black": #{$text-almost-black},
+  "text-blue": #{$text-blue},
+  "scrollbar": #d7dee1,
+);
+
+$dark: (
+  "background": #0b0b0b,
+  "background-dialog": #212020,
+  "background-dialog-dark": #212020,
+  "background-dialog2": #434142,
+  "background-blueish-gray": #2c2a2b,
+  "background-hover": #333131,
+  "background-hover-subtle": #161616,
+  "background-box": #161616,
+  "background-input": #2c2a2b,
+  "background-table": #111111,
+  "background-light-blue": #3a5cb4,
+  "background-medium-blue": #7493e8,
+  "button-gray": #2c2a2b,
+  "button-gray-hover": #434142,
+  "button-gray-on-gray": #2c2a2b,
+  "button-gray-on-gray-hover": #434142,
+  "button-white-hover": #2c2a2b,
+  "button-blue-outline": #004499,
+  "button-wired-outline": #434142,
+  "border-gray": #1e1d1d,
+  "border-light-gray": #1e1d1d,
+  // TODO
+  "border-dark-gray": #2d2c2c,
+  "icon-gray": #7b7b7b,
+  "icon-dark-gray": #413d3f,
+  "icon-black": #ffffff,
+  "icon-disabled": #313131,
+  "text": #ffffff,
+  "text-red": #f94b60,
+  "text-gray": #7b7b7b,
+  "text-almost-black": #ffffff,
+  "text-blue": #{$text-blue},
+  "scrollbar": #2a2828,
+);

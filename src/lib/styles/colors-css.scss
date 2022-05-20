@@ -1,0 +1,14 @@
+@import "/src/lib/styles/mixins.scss";
+@import "/src/lib/styles/colors.scss";
+
+body {
+  @each $key, $value in $light {
+    --color-#{$key}: #{$value};
+  }
+
+  @include dark-mode() {
+    @each $key, $value in $dark {
+      --color-#{$key}: #{$value};
+    }
+  }
+}
