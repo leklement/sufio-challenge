@@ -5,6 +5,8 @@ import styles from "./styles.module.scss";
 import {Footer} from "components/Footer/Footer";
 
 interface Props {
+  title: string;
+  hiddenHeader?: boolean;
   mainSectionClass?: string;
   children?: React.ReactElement;
 }
@@ -12,7 +14,7 @@ interface Props {
 export const AppLayoutDOM: {mainDiv?: HTMLDivElement} = {};
 
 export const AppLayout: React.FC<Props> = (props) => {
-  const {mainSectionClass} = props;
+  const {mainSectionClass, title, hiddenHeader} = props;
 
   // Refs
 
@@ -28,9 +30,11 @@ export const AppLayout: React.FC<Props> = (props) => {
 
   return (
     <div className={styles.AppLayout}>
-      <div className={styles.header}>
-        <Header />
-      </div>
+      {!hiddenHeader && (
+        <div className={styles.header}>
+          <Header title={title} />
+        </div>
+      )}
 
       <div ref={mainRef} className={cx(styles.main, mainSectionClass)}>
         {props.children}

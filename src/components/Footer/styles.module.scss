@@ -1,14 +1,12 @@
-@import "/src/lib/styles/colors.scss";
-
 .Footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid $orange;
-  margin: 0px 90px;
   padding-top: 27px;
   padding-bottom: 30px;
+  background: #222;
+  color: white;
 
   .title {
     font-weight: 700;

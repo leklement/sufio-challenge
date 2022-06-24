@@ -1,11 +1,13 @@
 import * as Routes from "components/Browser/routes";
 
-export const storyUrl = (id: string) => {
-  return Routes.storyDetail({
-    id,
-  });
+export const productsUrl = () => {
+  return Routes.products({});
 };
 
-export const newsUrl = () => {
-  return Routes.news({});
+export const orderUrl = () => {
+  return Routes.order({});
+};
+
+export const cartUrl = () => {
+  return Routes.cart({});
 };

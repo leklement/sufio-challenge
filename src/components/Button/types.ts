@@ -1,5 +1,6 @@
 export enum ButtonColor {
   ORANGE = "orange",
+  BLUE = "blue",
   TRANSPARENT = "transparent",
   TRANSPARENT_ON_DARK = "transparentOnDark",
 }

@@ -9,12 +9,17 @@ const GeneralLoader = () => {
   return <div>Loading</div>;
 };
 
-const LoadableDashboardPage = loadable(() => import("../NewsPage"), {
+const LoadableProductsPage = loadable(() => import("../ProductsPage"), {
   resolveComponent: (components) => components.default,
   fallback: <GeneralLoader />,
 });
 
-const LoadableStoryDetailsPage = loadable(() => import("../StoryDetailsPage"), {
+const LoadableCartPage = loadable(() => import("../CartPage"), {
+  resolveComponent: (components) => components.default,
+  fallback: <GeneralLoader />,
+});
+
+const LoadableOrderPage = loadable(() => import("../OrderPage"), {
   resolveComponent: (components) => components.default,
   fallback: <GeneralLoader />,
 });
@@ -26,16 +31,16 @@ export const Browser = () => {
         <Routes>
           {/* Dashboard */}
 
-          <Route path="/" element={<Navigate to={AppRoutes.news({})} />} />
-
-          <Route path={AppRoutes.news(undefined)} element={<LoadableDashboardPage />} />
-
-          {/* User */}
+          <Route path="/" element={<Navigate to={AppRoutes.products({})} />} />
 
           <Route
-            path={AppRoutes.storyDetail(undefined)}
-            element={<LoadableStoryDetailsPage />}
+            path={AppRoutes.products(undefined)}
+            element={<LoadableProductsPage />}
           />
+
+          <Route path={AppRoutes.cart(undefined)} element={<LoadableCartPage />} />
+          <Route path={AppRoutes.order(undefined)} element={<LoadableOrderPage />} />
+
           <Route element={<NotFoundPage />} />
         </Routes>
       </Router>

@@ -1,7 +1,7 @@
 import {IState as IBrowserState} from "./browser/types";
-import {IState as IStoriesState} from "./stories/types";
+import {IState as IShoppingState} from "./shopping/types";
 
 export interface AppState {
   browser: IBrowserState;
-  stories: IStoriesState;
+  shopping: IShoppingState;
 }

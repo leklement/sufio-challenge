@@ -1,0 +1,89 @@
+@import "/src/lib/styles/mixins.scss";
+@import "/src/lib/styles/colors.scss";
+
+.CartTable {
+  .total {
+    font-weight: 600;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.TableHeader {
+  background-color: lightgrey;
+  display: flex;
+  padding: 8px 6px;
+  font-weight: 600;
+
+  .item {
+    flex: 3;
+  }
+
+  .qty {
+    flex: 4;
+  }
+
+  .price {
+    flex: 2;
+    text-align: end;
+  }
+
+  .vat {
+    flex: 2;
+    text-align: end;
+  }
+
+  .total {
+    flex: 1;
+    text-align: end;
+  }
+}
+
+.TableRow {
+  display: flex;
+  align-items: center;
+  width: 98%;
+  border-bottom: 1px solid lightgray;
+  padding: 8px 6px;
+
+  .item {
+    flex: 3;
+  }
+
+  .qty {
+    display: flex;
+    align-items: center;
+    flex: 4;
+  }
+
+  .price {
+    flex: 2;
+    text-align: end;
+  }
+
+  .vat {
+    flex: 2;
+    text-align: end;
+  }
+
+  .total {
+    flex: 1;
+    font-weight: 600;
+    text-align: end;
+  }
+}
+
+.TableFooter {
+  padding: 8px 6px;
+  display: flex;
+  justify-content: space-between;
+
+  .back {
+    color: $button-blue;
+    cursor: pointer;
+  }
+}

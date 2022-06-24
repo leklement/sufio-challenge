@@ -122,6 +122,27 @@
     }
   }
 
+  &.blue {
+    background: $button-blue;
+    color: var(--color-background);
+    border: none;
+    box-shadow: none;
+    transition: 0.1s background-color;
+
+    &:hover {
+      background: var(--color-background);
+      color: var(--color-text);
+      box-shadow: 0 0 0 3px $button-blue;
+    }
+
+    &.disabled {
+      background: transparent;
+      color: var(--color-text);
+      cursor: default;
+      box-shadow: none;
+    }
+  }
+
   &.transparent {
     background: transparent;
     border: none;

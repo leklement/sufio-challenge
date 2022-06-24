@@ -1,0 +1,36 @@
+.CartPageMain {
+  overflow-y: scroll;
+
+  .cartPage {
+    display: flex;
+    flex-direction: column;
+
+    > section {
+      width: 100%;
+      border-bottom: 1px solid var(--color-border-gray);
+      padding: 30px 0;
+      padding-top: 20px;
+    }
+
+    > section.CartPageContent {
+      border-bottom: 0px;
+      flex: 1 1 auto;
+      width: 100%;
+      padding-bottom: 0;
+
+      > .content {
+        margin: 0px auto;
+        padding: 0 31px;
+      }
+
+      .pagination {
+        margin-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      > .title {
+        margin: 10px 0px 30px 0px;
+      }
+    }
+  }
+}

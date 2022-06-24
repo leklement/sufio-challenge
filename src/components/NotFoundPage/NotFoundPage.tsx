@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 export const NotFoundPage = () => {
   return (
-    <AppLayout>
+    <AppLayout title="Not found">
       <div className={styles.NotFoundPage}>
         <div className={styles.graphic} />
 

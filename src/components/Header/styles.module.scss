@@ -7,8 +7,6 @@
   justify-content: space-between;
   padding: 31px 36px;
 
-  border-top: 4px solid $orange;
-
   .left {
     display: flex;
     align-items: center;
@@ -20,23 +18,40 @@
     }
   }
 
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 16px;
-    font-size: 24px;
-    width: 33px;
-    height: 33px;
-    background-color: $orange;
-    color: white;
-  }
-
   .title {
     padding-right: 32px;
   }
 
   h1 {
     font-size: 26px;
+  }
+
+  .cartContainer {
+    position: relative;
+    cursor: pointer;
+
+    .counter {
+      position: absolute;
+      right: 0px;
+      background: black;
+      color: white;
+      width: 20px;
+      height: 20px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0px;
+      border-radius: 4px;
+      border: 1px solid white;
+    }
+
+    .cart {
+      &.dark {
+        path {
+          fill: white !important;
+        }
+      }
+    }
   }
 }

@@ -1,26 +1,16 @@
-import {createUrl, RouteParams} from "../../lib/helpers/routes";
-
-/* Params
--------------------------------------------------------------------------*/
-
-export interface NewsRouteParams extends RouteParams {}
-
-// User
-
-export interface StoryDetailRouteParams extends RouteParams {
-  id: string;
-}
+import {createUrl} from "../../lib/helpers/routes";
 
 /* Routes
 -------------------------------------------------------------------------*/
 
-export const news = (params: {} | undefined) => {
-  return createUrl(`/news`, params);
+export const products = (params: {} | undefined) => {
+  return createUrl(`/products`, params);
 };
 
-/* Routes
--------------------------------------------------------------------------*/
+export const order = (params: {} | undefined) => {
+  return createUrl(`/order`, params);
+};
 
-export const storyDetail = (params: StoryDetailRouteParams | undefined) => {
-  return createUrl(`/story/:id`, params);
+export const cart = (params: {} | undefined) => {
+  return createUrl(`/cart`, params);
 };

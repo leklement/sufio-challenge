@@ -1,20 +1,7 @@
-export interface IStoryDetails {
-  by: string;
-  descendants: number;
+export interface IProduct {
   id: number;
-  kids: number[];
-  score: number;
-  time: number;
-  title: string;
-  type: string;
-  url: string;
-}
-
-export interface IUser {
-  about: string;
-  created: number;
-  delay: number;
-  id: string;
-  karma: number;
-  submitted: number[];
+  name: string;
+  unit_price_incl_vat: number;
+  vat_category: number;
+  stock_quantity: number;
 }

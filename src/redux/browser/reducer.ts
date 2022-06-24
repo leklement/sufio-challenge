@@ -1,18 +1,11 @@
 import {Action, handleActions} from "redux-actions";
-import {
-  ActionType,
-  ENUM_SELECTED_TAB,
-  ISetWantsDarkModePayload,
-  ISetSelectedTabPayload,
-  IState,
-} from "./types";
+import {ActionType, ISetWantsDarkModePayload, IState} from "./types";
 
 const initialState: IState = {
   wantsDarkMode: false,
-  selectedTab: ENUM_SELECTED_TAB.latest,
 };
 
-type Payload = ISetWantsDarkModePayload | ISetSelectedTabPayload;
+type Payload = ISetWantsDarkModePayload;
 
 export const reducer = handleActions<IState, Payload>(
   {
@@ -25,17 +18,6 @@ export const reducer = handleActions<IState, Payload>(
       return {
         ...state,
         wantsDarkMode,
-      };
-    },
-    [ActionType.SET_SELECTED_TAB]: (
-      state: IState,
-      action: Action<ISetSelectedTabPayload>,
-    ): IState => {
-      const {selectedTab} = action.payload;
-
-      return {
-        ...state,
-        selectedTab,
       };
     },
   },

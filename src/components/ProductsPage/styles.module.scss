@@ -1,0 +1,103 @@
+@import "/src/lib/styles/mixins.scss";
+@import "/src/lib/styles/colors.scss";
+
+.NewsPageMain {
+  overflow-y: scroll;
+
+  .newsPage {
+    display: flex;
+    flex-direction: column;
+
+    > section {
+      width: 100%;
+      border-bottom: 1px solid var(--color-border-gray);
+      padding: 30px 0;
+      padding-top: 20px;
+    }
+
+    > section.ProductsPageContent {
+      border-bottom: 0px;
+      flex: 1 1 auto;
+      width: 100%;
+      padding-bottom: 0;
+
+      > .content {
+        margin: 0px auto;
+        padding: 0 31px;
+      }
+
+      .pagination {
+        margin-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      > .title {
+        margin: 10px 0px 30px 0px;
+      }
+    }
+  }
+  .productList {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 10px;
+    margin: auto;
+
+    @include for-size(lte-tablet-portrait) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 870px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include for-size(lte-phone) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}
+
+.Product {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px;
+
+  .name {
+    font-weight: 600;
+  }
+
+  .footer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image {
+    background-color: silver;
+    height: 175px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  @include for-size(lte-tablet) {
+    .image {
+      height: 160px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .image {
+      height: 125px;
+    }
+  }
+
+  @include for-size(lte-tablet-portrait) {
+    .image {
+      height: 160px;
+    }
+  }
+}
+
+.empty {
+  text-align: center;
+}

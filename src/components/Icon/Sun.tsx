@@ -3,16 +3,12 @@
 
 import React from "react";
 
-interface IOuterProps {
-  className?: string;
-}
+interface IOuterProps {}
 
 /* Template
     -------------------------------------------------------------------------*/
 
-export const Sun: React.FC<IOuterProps> = (props) => {
-  const {className} = props;
-
+export const Sun: React.FC<IOuterProps> = () => {
   // Render
 
   return (
